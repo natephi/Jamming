@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import '/Users/Asus/jamming/src/Components/Playlist/Playlist.js';
+import '/Components/SearchBar/SearchBar.js';
+import '/Components/SearchResults/SearchResults.js';
 
 function App() {
   return (
