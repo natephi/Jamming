@@ -3,8 +3,17 @@ import './App.css';
 import '/Users/Asus/jamming/src/Components/Playlist/Playlist.js';
 import '/Components/SearchBar/SearchBar.js';
 import '/Components/SearchResults/SearchResults.js';
+import { render } from '@testing-library/react';
+import React from 'react';  
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {searchResults: [name, artist, album, id]}
+  }
+  
+  
+  render() {
   return (
     
     <div className="App">
@@ -15,7 +24,7 @@ function App() {
   <div className="App">
     // Add a SearchBar component
     <div className="App-playlist">
-      // Add a SearchResults component
+      <SearchResults searchResults={this.state.searchResults}/>
     // Add a Playlist component
     </div>
   </div>
@@ -34,6 +43,7 @@ function App() {
       </header>
     </div>
   );
+}
 }
 
 export default App;
